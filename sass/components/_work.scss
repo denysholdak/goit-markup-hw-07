@@ -1,0 +1,33 @@
+.work {
+	padding-top: 0;
+
+	&__list {
+		@extend %flex-wrap;
+	}
+}
+
+.work-item {
+	position: relative;
+	z-index: 10;
+
+	&:not(:nth-child(n + 3)) {
+		margin-right: 30px;
+	}
+
+	&__text {
+		@extend %flex-center;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		width: 370px;
+		min-height: 70px;
+
+		font-weight: $weidth-bold;
+		line-height: 1.14;
+		text-transform: uppercase;
+		color: $second-text-color;
+		background: rgba(47, 48, 58, 0.8);
+	}
+}

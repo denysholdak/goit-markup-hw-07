@@ -1,0 +1,99 @@
+.footer {
+    background-color: $second-background-color;
+    padding: 60px 0;
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+    }
+}
+.adress-footer {
+    margin-right: 70px;
+}
+
+@import "../layouts/logo";
+
+.logo__txt--white {
+    @include logo($second-text-color);
+}
+
+.address {
+    margin-top: 20px;
+
+    &__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+}
+
+.adress__link {
+    @include adress-link($second-text-color);
+
+    &--grey {
+    @include adress-link($color-transparency-06);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $accent-text-color;
+    }
+}
+.join {
+	display: flex;
+	flex-direction: column;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+	text-align: left;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $second-text-color;
+    font-weight: $weidth-bold;
+}
+
+.social__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social__link--grey {
+    @include social($second-text-color, rgba(255, 255, 255, 0.1));
+}
+
+.email {
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        margin-right: 12px;
+        padding: 15px 16px;
+    
+        width: 358px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        color: transparent;
+    
+        font-size: $size-medium;
+        line-height: 1.25;
+        color: $color-transparency-06;
+        background-color: transparent;
+    }
+}
+
+
+.button--img::after {
+    content: "";
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/icon-send.svg");
+    background-size: contein;
+}
